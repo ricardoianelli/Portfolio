@@ -9,10 +9,14 @@ body {
 
 #jobs_container {
     position: relative;
+    display: flex;
     width: 550px;
     height: 350px;
     border: 15px #EDEDED solid;
     background-color: #F2F2F2;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .change_job_button {
