@@ -1,5 +1,6 @@
 export default class JobWidget {
     constructor(id, job, htmlElement, posX, posY) {
+        
         this.id = id;
         this.job = job;
         this.htmlElement = htmlElement;
@@ -25,9 +26,6 @@ export default class JobWidget {
         return {x, y};
     }
 
-    // setX(newX) {this.htmlElement.style.left = `${newX}px`;}
-    // setY(newY) {this.htmlElement.style.top = `${newY}px`;}
-
     setX(newX) {this.pos.x = newX;}
     setY(newY) {this.pos.y = newY;}
 
@@ -41,8 +39,7 @@ export default class JobWidget {
     setPos(newX, newY) {
         this.setX(newX);
         this.setY(newY);
-        this.updateSize();
         let translated3dValue = `translate3d(${newX}px,${newY}px,0)`;
-        this.htmlElement.style.transform = translated3dValue;
+        this.htmlElement.style.transform = translated3dValue; 
     }
 }
