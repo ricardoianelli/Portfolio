@@ -191,6 +191,23 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
 
+themeButton.animate([
+    // keyframes
+    // { transform: 'scale(1)' }, 
+    // { transform: 'scale(0.8)' },
+    // { transform: 'scale(1)' },
+
+    { transform: 'rotate(0deg)' },
+    { transform: 'rotate(15deg)' },
+    { transform: 'rotate(0deg)' },
+    { transform: 'rotate(-15deg)' },
+    { transform: 'rotate(0deg)' }
+], {
+    // timing options
+    duration: 1000,
+    iterations: Infinity
+});
+
 const refusalButton = document.getElementById('refusal-button');
 var currentClicks = 0;
 
@@ -217,6 +234,4 @@ refusalButton.addEventListener('click', () =>{
 
          }, 1000);
     };
-
-    
 });
