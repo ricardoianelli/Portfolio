@@ -745,12 +745,11 @@ img {
 }
 
 .project a {
-  cursor: pointer;
-  margin-top: 0px;
-  margin-bottom: 5px;
-  max-width: 100%;
-  text-align: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-self: center;
 }
+
 
 .project__bg {
   background-color: var(--first-color-second);
@@ -1136,7 +1135,7 @@ img {
     align-items: center;
   }
   .project {
-    text-align: initial;
+    text-align: center;
   }
   .project__bg {
     background: none;
@@ -1213,3 +1212,50 @@ img {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+.minigame {
+  text-align: center;
+}
+
+.minigame a {
+  width: -moz-fit-content;
+  width: fit-content;
+  align-self: center;
+}
+
+.minigame div {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+
+}
+
+.minigameCanvas {
+  width: 100%;
+  object-fit: contain;
+}   
+
+.minigame__bg {
+  background-color: var(--first-color-second);
+  padding-top: 3rem;
+}
+
+.minigame__title {
+  font-size: var(--h2-font-size);
+  margin-bottom: var(--mb-0-75);
+}
+
+.minigame__description {
+  margin-bottom: var(--mb-1-5);
+}
+
+.minigame__title, .minigame__description {
+  color: #FFF;
+}
+
+.minigame__img {
+  width: 232px;
+  justify-self: center;
+}
+
