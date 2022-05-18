@@ -26,4 +26,5 @@ If you want to contribute, don't be shy! Open a pull request and let's create so
 Give a ⭐️ if this repository helped you!
 
 
-*Original front-end template (HTML,CSS,JS) by Bedimcode.*
+*Original front-end template (HTML,CSS,JS) by Bedimcode.*  
+*Original stacker minigame by [slicker.me](https://slicker.me/).*
