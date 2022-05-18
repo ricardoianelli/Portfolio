@@ -643,6 +643,8 @@ img {
   background-color: var(--container-color);
   padding: 1.5rem;
   border-radius: .5rem;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .services__modal-services {
@@ -1125,9 +1127,6 @@ img {
   .services__content {
     padding: 6rem 0 2rem 2.5rem;
   }
-  .services__modal-content {
-    width: 450px;
-  }
   .portfolio__img {
     width: 320px;
   }
@@ -1257,5 +1256,25 @@ img {
 .minigame__img {
   width: 232px;
   justify-self: center;
+}
+
+.architecture__img {
+  max-width:100%;
+  max-height:100%;
+}
+
+.architecture_section__subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-3);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#architecture_github {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
 }
 
