@@ -180,6 +180,12 @@ if (selectedTheme) {
   document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
   themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme)
 }
+else {
+    document.body.classList.toggle(darkTheme)
+    themeButton.classList.toggle(iconTheme)
+    localStorage.setItem('selected-theme', 'dark')
+    localStorage.setItem('selected-icon', 'uil-sun')
+}
 
 // Activate / deactivate the theme manually with the button
 themeButton.addEventListener('click', () => {
@@ -234,4 +240,35 @@ refusalButton.addEventListener('click', () =>{
 
          }, 1000);
     };
+});
+
+const messageForm = document.getElementById("messageForm");
+const messageFormButton = document.getElementById("messageFormButton");
+
+messageForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    fetch(event.target.action, {
+        method: 'POST',
+        body: JSON.stringify({
+            name: messageForm.elements["name"].value,
+            email: messageForm.elements["email"].value,
+            subject: messageForm.elements["subject"].value,
+            msg: messageForm.elements["msg"].value
+          })
+    }).then((resp) => {
+
+        if (resp.status == "202") {
+            messageFormButton.textContent = "Message sent!";
+            messageFormButton.disabled = true;
+            messageFormButton.style.background='#d9d2e9';
+            return resp.json();
+        }
+
+        alert("There was an error sending your message, please try again. Sorry for the inconvenience.")
+
+    }).catch((error) => {
+        alert("There was an error sending your message, please try again. Sorry for the inconvenience.")
+    });
+    
 });

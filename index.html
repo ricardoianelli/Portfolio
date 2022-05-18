@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="assets/css/styles.css">
 
         <title>Ricardo Ianelli</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
     </head>
     <body>
         <!--==================== HEADER ====================-->
@@ -379,6 +380,16 @@
 
                                 <div class="skills__data">
                                     <div class="skills__titles">
+                                        <h3 class="skills__name">Amazon Route 53</h3>
+                                        <span class="skills__number">70%</span>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percentage" style="width: 70%"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
                                         <h3 class="skills__name">Amazon SQS</h3>
                                         <span class="skills__number">70%</span>
                                     </div>
@@ -469,6 +480,16 @@
 
                                 <div class="skills__data">
                                     <div class="skills__titles">
+                                        <h3 class="skills__name">Amazon Cognito</h3>
+                                        <span class="skills__number">50%</span>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percentage" style="width: 50%"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
                                         <h3 class="skills__name">Amazon DynamoDB</h3>
                                         <span class="skills__number">40%</span>
                                     </div>
@@ -484,6 +505,16 @@
                                     </div>
                                     <div class="skills__bar">
                                         <span class="skills__percentage" style="width: 50%"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Amazon CloudFront</h3>
+                                        <span class="skills__number">30%</span>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percentage" style="width: 30%"></span>
                                     </div>
                                 </div>
 
@@ -823,31 +854,31 @@
                         </div>
                     </div>
 
-                    <form action="" class="contact__form grid">
+                    <form id="messageForm" action="https://8h4ks04e19.execute-api.us-east-1.amazonaws.com/Production/message" method="POST" class="contact__form grid">
                         <div class="contact__inputs grid">
                             <div class="contact__content">
-                                <label for="" class="contact__label">Name</label>
-                                <input type="text" class="contact__input">
+                                <label for="name" class="contact__label">Name (Required)</label>
+                                <input required name="name" type="text" id="name" class="contact__input" required maxlength="40">
                             </div>
                             <div class="contact__content">
-                                <label for="" class="contact__label">Email</label>
-                                <input type="email" class="contact__input">
+                                <label for="email" class="contact__label">Email (Required)</label>
+                                <input required name="email" type="email" id="email" class="contact__input" required maxlength="40">
                             </div>
                         </div>
                         <div class="contact__content">
-                            <label for="" class="contact__label">Subject</label>
-                            <input type="text" class="contact__input">
+                            <label for="subject" class="contact__label">Subject (Required)</label>
+                            <input required name="subject" type="text" id="subject" class="contact__input" required maxlength="40">
                         </div>
                         <div class="contact__content">
-                            <label for="" class="contact__label">Message</label>
-                            <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                            <label for="msg" class="contact__label">Message (Required. Max. 500 characteres)</label>
+                            <textarea required name="msg" id="msg" cols="0" rows="7" class="contact__input" required maxlength="500"></textarea>
                         </div>
                         
                         <div>
-                            <a href="#" class="button button--flex">
+                            <button id="messageFormButton" type="submit" class="button button--flex">
                                 Send Message!
                                 <i class="uil uil-message button__icon"></i>
-                            </a>
+                            </button>
                         </div>
                     </form>
                 </div>
