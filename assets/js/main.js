@@ -331,6 +331,7 @@ function gameOver() {
 function animate() {
   if (mode != 'gameOver') {
     context.clearRect(0, 0, canvas.width, canvas.height);
+    minigameScore.innerHTML = `Score: ${(current-1)}`;
 
     for (let n = 0; n < boxes.length; n++) {
       let box = boxes[n];
@@ -372,7 +373,6 @@ function animate() {
         else
           xSpeed--;
         current++;
-        minigameScore.innerHTML = `Score: ${(current-1)}`;
         scrollCounter = height;
         newBox();
       }
