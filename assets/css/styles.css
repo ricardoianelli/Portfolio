@@ -290,7 +290,7 @@ img {
 }
 
 .home__blob-img {
-  width: 170px;
+  width: 270px;
 }
 
 .home__data {
@@ -1175,7 +1175,7 @@ img {
     padding: 0;
   }
   .home__blob {
-    width: 320px;
+    width: 280px;
   }
   .home__social {
     transform: translateX(-6rem);
