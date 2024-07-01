@@ -9,8 +9,6 @@
 
 ## 📚 About 📚
 
-**Live demo:** [ricardoianelli.com](https://ricardoianelli.com) 
-
 In my Master's Degree I had an 1 month course called Cloud Computing, where I've learned about the basics of Cloud and Amazon Web Services. For the final project I had to create a serverless architecture of a front-end page with some messaging form that really works, and do all of that using AWS. I've first created an architecture design using [draw.io](draw.io) and then created every component using AWS. In the future I plan to recreate all the components with Infrastructure as Code using CloudFormation stacks, so that other people can easily reproduce that architecture with the YAML files.
 
 ## 🏛️ Architecture 🏛️
